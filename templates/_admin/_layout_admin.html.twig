@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}Auberoche Admin{% endblock %}</title>
+    <!-- REQUIRED CSS/FONT -->
+    {% include '_admin/_blocks/_required_css.html.twig' %}
+    <!-- REQUIRED CSS/FONT -->
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <div class="wrapper">
+        <!-- Navbar -->
+        {% include '_admin/_blocks/_navbar.html.twig' %}
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        {% include '_admin/_blocks/_sidebar.html.twig' %}
+        <!-- /.Main Sidebar Container -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                {% block content_header %}{% endblock %}
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <section class="content">
+                {% block content_body %}{% endblock %}
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Main Footer -->
+        {% include '_admin/_blocks/_footer.html.twig' %}
+        <!-- /.Main Footer -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    {% include '_admin/_blocks/_required_js.html.twig' %}
+    <!-- REQUIRED SCRIPTS -->
+    {% block javascripts %}
+    {% endblock %}
+</body>
+
+</html>
